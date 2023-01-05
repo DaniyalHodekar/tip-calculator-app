@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="logo"><img src="./images/logo.svg" alt=""></div>
+    <div class="tip-calculator">
+      <div class="partOne">
+        <label for="" id="ok">Bill</label>
+        <input type="number" class="input bill-input ok" id="bill-input">
+        <label for="">Select Tip %</label>
+        <div class="tip">
+          <div class="tips tip-5">5%</div>
+          <div class="tips tip-10">10%</div>
+          <div class="tips tip-15">15%</div>
+          <div class="tips tip-25">25%</div>
+          <div class="tips tip-50">50%</div>
+          <div id="tip-custom"><input type="number" class="tip-custom" placeholder="Custom"></div>
+
+        </div>
+        <div class="peopleLabel">
+          <label for="">Number of People</label>
+        <label for="" class="error">Can't be Zero</label>
+        </div>
+        
+
+        <input type="number" class="input people-input">
+      </div>
+
+      <div class="result">
+      <div class="tip-amount">
+        <div class="text">
+          <p>Tip Amount</p>
+          <p class="person">/ person</p>
+        </div>
+        <div class="amount" id="tip-amount">₹0.00</div>
+
+      </div>
+
+      <div class="total-amount">
+        <div class="text">
+          <p>Total</p>
+          <p class="person">/ person</p>
+        </div>
+        <div class="amount" id="total-amount">₹0.00</div>
+
+      </div>
+
+      <button class="reset-btn">RESET</button>
+
+    </div>
+
+    <div class="attribution">
+      Coded by <a href="https://daniyalhodekar.netlify.app">Daniyal Hodekar</a>.
+      <script src="script.js"></script>
+    </div>
+    </div>
+
+    
+
+
+
+    
+  </body>
+</html>
