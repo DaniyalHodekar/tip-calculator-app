@@ -17,6 +17,9 @@ tips.forEach((val)=> {
 })
 
 reset.addEventListener('click', ()=>{
+    tips.forEach((val)=> {
+        val.classList.remove('active-tip')
+    });
     billInput.value = 0;
     billInputFun();
     peopleInput.value = 1;
