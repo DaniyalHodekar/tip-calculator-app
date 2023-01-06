@@ -7,6 +7,15 @@ let tipCustom = document.querySelector('.tip-custom')
 let reset = document.querySelector('.reset-btn')
 let errorMsg = document.querySelector('.error');
 
+billInput.value = 0;
+peopleInput.value = 1;
+tipPerPerson.innerHTML = "₹" + (0).toFixed(2);
+totalPerPerson.innerHTML = "₹" + (0).toFixed(2);
+
+let billValue = 0.0;
+let peopleValue = 1;
+let tipValue = 0;
+
 billInput.addEventListener("input", billInputFun)
 peopleInput.addEventListener("input", peopleInputFun)
 tipCustom.addEventListener('input', tipCustomFun)
@@ -25,17 +34,11 @@ reset.addEventListener('click', ()=>{
     peopleInput.value = 1;
     peopleInputFun();
     tipCustom.value =``
+    tipValue = 0;
 })
 
 
-billInput.value = 0;
-peopleInput.value = 1;
-tipPerPerson.innerHTML = "₹" + (0).toFixed(2)
-totalPerPerson.innerHTML = "₹" + (0).toFixed(2)
 
-let billValue = 0.0
-let peopleValue = 1
-let tipValue = 0
 
 function billInputFun () {
     billValue = parseFloat(billInput.value)
@@ -67,14 +70,14 @@ function tipCustomFun (){
 
 function handleClick (event) {
     tips.forEach((val)=> {
-        val.classList.toggle("active-tip");
         val.classList.remove('active-tip');
         if(event.target.innerHTML == val.innerHTML) {
+            // val.classList.toggle("active-tip");
             val.classList.add('active-tip');
             tipValue = parseFloat(val.innerHTML)/100
             // console.log(tipValue)
         }
-        
+        // tipValue = 0
         
     }) 
     calculateTip();
